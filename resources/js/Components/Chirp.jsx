@@ -9,6 +9,8 @@ import { useForm, usePage } from '@inertiajs/react';
 dayjs.extend(relativeTime);
 
 export default function Chirp({ chirp }) {
+    const { auth } = usePage().props;
+
     const [editing, setEditing] = useState(false);
 
     const { data, setData, patch, clearErrors, reset, errors } = useForm({
