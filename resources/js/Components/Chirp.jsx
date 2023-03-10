@@ -14,7 +14,7 @@ export default function Chirp({ chirp }) {
                 <div className="flex justify-between items-center">
                     <div>
                         <span className="text-gray-800">{chirp.user.name}</span>
-                        <span className="ml-2 text-sm text-gray-600">{new Date(chirp.created_at).toLocaleString()}</span>
+                        <span className="ml-2 text-sm text-gray-600">{dayjs(chirp.created_at).fromNow()}</span>
                     </div>
                 </div>
             
